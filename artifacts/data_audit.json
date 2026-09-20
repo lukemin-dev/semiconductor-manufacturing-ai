@@ -1,0 +1,19 @@
+{
+  "splits": {
+    "development": {
+      "n": 1175,
+      "fails": 78
+    },
+    "test": {
+      "n": 392,
+      "fails": 26
+    }
+  },
+  "cv_folds": 15,
+  "overlap": 0,
+  "overall_missing_fraction": 0.04537548808583821,
+  "duplicate_rows": 0,
+  "preprocessing_fit": "Within each fold; final fit development only",
+  "test_used_for_selection": false,
+  "test_previously_viewed": true
+}

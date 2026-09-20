@@ -1,0 +1,22 @@
+{
+  "splits": {
+    "train": {
+      "n": 783,
+      "fails": 52
+    },
+    "validation": {
+      "n": 392,
+      "fails": 26
+    },
+    "test": {
+      "n": 392,
+      "fails": 26
+    }
+  },
+  "overlap": 0,
+  "overall_missing_fraction": 0.04537548808583821,
+  "duplicate_rows": 0,
+  "feature_filter_fit": "train only",
+  "imputer_scaler_fit": "train only; IsolationForest normal train only",
+  "test_used_for_selection": false
+}

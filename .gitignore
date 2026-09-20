@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+.pytest_cache/
+artifacts_demo/
+# Local career material is intentionally not published.
+docs/PORTFOLIO.md
+docs/APPLICATIONS.md
+docs/INTERVIEW.md
+docs/fonts/
+scripts/write_applications.py
+scripts/create_summary.py
+output/
+tmp/
+artifacts/*.log
+*.zip

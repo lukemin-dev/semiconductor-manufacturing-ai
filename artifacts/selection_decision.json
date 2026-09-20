@@ -1,0 +1,17 @@
+{
+  "selected_model": "random_forest_balanced",
+  "thresholds": {
+    "isolation_forest": -0.08784409310822394,
+    "logistic_full_C01": 0.1458181667487593,
+    "logistic_top40_C001": 0.47518167434357056,
+    "logistic_top40_C01": 0.4555447828485391,
+    "random_forest_balanced": 0.09059120517518601,
+    "random_forest_unweighted": 0.08823333333333332,
+    "xgboost_balanced": 0.12960709631443024,
+    "xgboost_unweighted": 0.02985217794775963
+  },
+  "selection": "maximum mean fold AP on development, excluding IsolationForest",
+  "max_oof_alert_rate": 0.3,
+  "n_folds": 15,
+  "test_status": "Previously viewed v1 test; reused exploratory holdout, not new independent validation"
+}

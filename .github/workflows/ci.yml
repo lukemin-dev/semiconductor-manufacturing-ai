@@ -1,0 +1,28 @@
+name: Verify portfolio
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: secom
+          POSTGRES_PASSWORD: secom_local
+          POSTGRES_DB: secom
+        ports: ["5432:5432"]
+        options: --health-cmd "pg_isready -U secom" --health-interval 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install -r requirements.lock.txt
+      - run: ruff check src api dashboard scripts tests --select F
+      - run: ruff format --check src api dashboard scripts tests
+      - run: pytest -q
+        env:
+          TEST_DATABASE_URL: postgresql+psycopg2://secom:secom_local@localhost:5432/secom
+      - run: docker compose config --quiet
+      - run: docker build -t secom-ci .

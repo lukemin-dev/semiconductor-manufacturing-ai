@@ -1,0 +1,10 @@
+{
+  "source": "https://archive.ics.uci.edu/static/public/179/secom.zip",
+  "citation": "McCann, M. & Johnston, A. (2008). SECOM. UCI Machine Learning Repository. https://doi.org/10.24432/C54305",
+  "license": "CC BY 4.0",
+  "files": {
+    "secom.names": "6d91b0b46cdee03064ee3e3112f937c1b3f7fcd9933575794ec07974e6f1ea59",
+    "secom.data": "20f0e7ee434f7dcbae0eea9ffff009a2b57f42d6b0dc9a5bd4f00782c0a3374c",
+    "secom_labels.data": "126884cf453705c9e61a903fe906f0665a3b45ce3639e621edc5c93c89627e03"
+  }
+}

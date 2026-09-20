@@ -1,0 +1,57 @@
+{
+  "model": "random_forest_balanced",
+  "threshold": 0.08126270185520874,
+  "method": "chronological 60/20/20 by unique timestamp; no timestamp shared across partitions",
+  "status": "sensitivity analysis on previously explored SECOM; not independent external validation",
+  "metrics": {
+    "threshold": 0.08126270185520874,
+    "accuracy": 0.6340694006309149,
+    "fail_precision": 0.061946902654867256,
+    "fail_recall": 0.4117647058823529,
+    "f1": 0.1076923076923077,
+    "roc_auc": 0.5719607843137255,
+    "pr_auc": 0.08170877941691962,
+    "tn": 194,
+    "fp": 106,
+    "fn": 10,
+    "tp": 7
+  },
+  "intervals": {
+    "fail_recall": {
+      "lower": 0.17647058823529413,
+      "upper": 0.6470588235294118
+    },
+    "fail_precision": {
+      "lower": 0.02830188679245283,
+      "upper": 0.1
+    },
+    "f1": {
+      "lower": 0.04878048780487805,
+      "upper": 0.17094017094017094
+    },
+    "pr_auc": {
+      "lower": 0.052090462796501896,
+      "upper": 0.20702591644932783
+    }
+  },
+  "splits": {
+    "train": {
+      "n": 941,
+      "fails": 76,
+      "start": "2008-07-19T11:55:00",
+      "end": "2008-09-20T06:08:00"
+    },
+    "validation": {
+      "n": 309,
+      "fails": 11,
+      "start": "2008-09-20T07:21:00",
+      "end": "2008-10-02T17:00:00"
+    },
+    "test": {
+      "n": 317,
+      "fails": 17,
+      "start": "2008-10-02T17:19:00",
+      "end": "2008-10-17T06:07:00"
+    }
+  }
+}
