@@ -16,3 +16,5 @@ output/
 tmp/
 artifacts/*.log
 *.zip
+
+experiments/*/*.log

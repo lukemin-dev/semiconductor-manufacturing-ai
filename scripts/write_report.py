@@ -186,4 +186,7 @@ ruff format --check src api dashboard scripts tests
 AI 코딩 도구를 활용해 구현·검증했습니다. 설계 결정, 결과와 한계를 문서화하고 코드·테스트로 재현할 수 있게 공개합니다. 데이터 재배포는 UCI CC BY 4.0 출처 표시를 따릅니다.
 """
 )
-(ROOT / "README.md").write_text(text)
+(ROOT / "README.md").write_text(
+    text
+    + "\n## v3 추가 검증: 새 기법이 반드시 개선은 아니다\n\n[실험 계획](docs/V3_EXPERIMENT_PLAN.md) → [전체 결과](docs/V3_RESULTS.md)\n\n개발 데이터 안에서 결측 정보 추가·상관 변수 제거·Balanced Random Forest를 138회 학습으로 비교했습니다. 5×3 nested CV와 3개 시간 구간 평가를 사용했으며, 기존 test 392건은 다시 평가하지 않았습니다. 결측 indicator는 outer AP를 0.187→0.206으로 높였지만 시간순 AP는 0.178→0.158로 낮췄습니다. **승격 기준을 통과한 후보가 없어 예측 서비스는 v2를 유지합니다.**\n\n![v3 comparison](docs/v3-comparison.png)\n\n재현: `python scripts/research_v3.py` → `python scripts/report_v3.py`. 결과는 `experiments/v3/`에 저장하며 기존 `artifacts/`를 덮어쓰지 않습니다. 연구 gate는 개인 프로젝트의 사전 판단 규칙이며 통계적 유의성이나 현장 기준을 의미하지 않습니다.\n"
+)

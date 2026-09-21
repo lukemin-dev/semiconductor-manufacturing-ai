@@ -1,0 +1,9 @@
+{
+  "research_gate_passed": [],
+  "deployment_changed": false,
+  "reason": "No candidate passes predefined outer AP + temporal AP + temporal recall gates",
+  "historical_test_evaluated": false,
+  "nested_selected_outer_ap_mean": 0.20506091921806333,
+  "nested_selected_outer_ap_std": 0.05608767578953912,
+  "v2_artifacts_unchanged": true
+}

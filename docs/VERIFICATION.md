@@ -17,3 +17,10 @@
 macOS 6 passed, PostgreSQL 통합 검사 3 passed, Linux Docker 6 passed. 대시보드 예측·TOP5·이력 표시를 실제 브라우저에서 확인.
 
 테스트 도구의 deprecation 경고 2건은 실패가 아닙니다. 테스트 통과는 모델의 높은 성능 또는 현장 적용 가능성을 의미하지 않습니다. 평가 결과와 한계는 README를 함께 확인하세요.
+
+## v3 연구 검증
+
+- 개발 데이터 전용 6개 후보·138회 학습 완료. historical test 평가 0건.
+- v2 모델·metadata·metrics·test predictions SHA-256 보존 확인.
+- pytest 13개 통과: fold-local 결측 정보, 상관 필터 고정, 동점 검토량, v3 분할 감사를 추가.
+- 모든 후보가 사전 승격 조건 미충족. 배포 모델은 v2 유지.
