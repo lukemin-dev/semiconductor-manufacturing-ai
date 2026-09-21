@@ -131,3 +131,15 @@ with st.expander("검증 방식과 불확실성"):
     st.caption(
         "95% 구간은 고정 모델·테스트 데이터에서 계산한 층화 bootstrap 구간입니다. 학습·모델 선택 불확실성을 모두 포함하지 않습니다."
     )
+
+v3_summary = ROOT / "experiments/v3/comparison.csv"
+if v3_summary.exists():
+    with st.expander("v3 추가 실험: 결측 정보와 균형 표본추출"):
+        st.info(
+            "v3는 개발 데이터만 사용한 추가 연구입니다. 개선 조건을 모두 통과한 후보가 없어 현재 예측 서비스는 v2 모델을 유지합니다."
+        )
+        st.dataframe(pd.read_csv(v3_summary), hide_index=True)
+        st.caption(
+            "Outer AP는 바깥 교차검증, Temporal AP는 개발 데이터 내부의 시간순 평가입니다. 기존 테스트 점수와 직접 비교하지 마세요. Recall@30%는 각 배치의 상위 30%를 검토했을 때의 탐지율입니다."
+        )
+        st.image(str(ROOT / "docs/v3-comparison.png"))
