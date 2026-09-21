@@ -1,5 +1,7 @@
 # SECOM Manufacturing AI
 
+[![Verify portfolio](https://github.com/lukemin-dev/semiconductor-manufacturing-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/lukemin-dev/semiconductor-manufacturing-ai/actions/workflows/ci.yml)
+
 **반도체 공개 데이터의 불량 탐지, 원인 후보 설명, 예측·경보 추적을 연결한 재현 가능한 시스템.**
 
 Python · scikit-learn · XGBoost · FastAPI · PostgreSQL · Streamlit · Docker
